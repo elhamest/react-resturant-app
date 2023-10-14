@@ -1,10 +1,11 @@
+import Hero from "./components/Hero/Hero";
 import "./App.css";
 
 function App() {
   return (
-    <header>
-      <p>hello !</p>
-    </header>
+    <main>
+      <Hero />
+    </main>
   );
 }
 
