@@ -1,8 +1,9 @@
+import Section from "../UI/Section";
 import backgroundImage from "../../assets/b1.jpg";
 
 const Hero = () => {
   return (
-    <div className="text-center md:flex md:flex-row md:justify-around md:items-center">
+    <Section className="text-center md:flex md:flex-row md:justify-around md:items-center">
       <div>
         <h3 className="text-sm font-medium text-thirdText mb-3.5 md:text-base">
           لحظات خوشایندی را با ما تجربه کنید...
@@ -20,9 +21,9 @@ const Hero = () => {
       <img
         src={backgroundImage}
         alt="Aso Resturant"
-        className="hidden mt-0 mb-0 mx-auto max-w-xl select-none md:block md:w-1/2"
+        className="hidden max-w-xl select-none md:block md:w-1/2"
       />
-    </div>
+    </Section>
   );
 };
 
