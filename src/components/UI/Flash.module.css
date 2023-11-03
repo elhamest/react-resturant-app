@@ -1,0 +1,69 @@
+.flash {
+  text-align: center;
+  direction: rtl;
+}
+
+.flash i {
+  width: 12px;
+  height: 12px;
+  margin-left: 10px;
+  border-radius: 50%;
+  /*background-color: rgb(30, 206, 142);*/
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+
+.flash i::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -4px;
+  top: -4px;
+  /*background-color: rgba(33, 198, 79, 0.3);*/
+  border-radius: 50%;
+}
+
+@keyframes flash {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/*
+@media (min-width: 768px) {
+  .flash {
+    text-align: right;
+  }
+}
+*/
+
+.in-range i {
+  background-color: rgb(30, 206, 142);
+  /*animation: flash 1s linear 0s infinite normal none running;*/
+  animation-name: flash;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+}
+
+.in-range i::before {
+  background-color: rgba(33, 198, 79, 0.3);
+}
+
+.out-of-range i {
+  background-color: rgb(151, 151, 151);
+}
+
+.out-of-range i::before {
+  background-color: rgba(46, 46, 46, 0.3);
+}
