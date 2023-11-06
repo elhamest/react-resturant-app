@@ -3,8 +3,8 @@
 @import "tailwindcss/utilities";
 
 :root {
-  --dark-primary-color: #00796b;
-  --primary-color: #009688;
+  --dark-primary-color:#1d965c  /*#00796b;*/
+  --primary-color: #32bb78; /*#009688*/
   --light-primary-color: #b2dfdb;
   --accent-color: #ffc107;
   --primary-text: #212121;
@@ -24,4 +24,24 @@
 
 body {
   margin: 0;
+  min-width: 320px;
+}
+
+.fade-in-up {
+  animation-name: fadeInUp;
+  opacity: 0;
+  transform: translateY(20px);
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateZ(0);
+  }
 }
