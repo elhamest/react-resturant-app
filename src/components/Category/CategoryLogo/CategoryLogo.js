@@ -4,8 +4,8 @@ import styles from "./CategoryLogo.module.css";
 const CategoryLogo = () => {
   return (
     <div className={styles["category-logo"]}>
-      <img src={dishImage} alt="رستوران" />
-    </div>
+    <img src={dishImage} alt="رستوران" />
+  </div>
   );
 };
 
