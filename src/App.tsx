@@ -1,5 +1,6 @@
 import Hero from "./components/Hero/Hero";
 import orderingHourMessage from "./models/orderingHourMessage";
+import Category from "./components/Category/Category";
 
 function App() {
   const getOrderingTimeMessage = () => {
@@ -53,6 +54,7 @@ function App() {
   return (
     <main>
       <Hero orderingHour={getOrderingTimeMessage()} />
+      <Category />
     </main>
   );
 }

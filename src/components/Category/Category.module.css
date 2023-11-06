@@ -1,0 +1,50 @@
+.category {
+  padding: 35px 0 0;
+  background-color: #fff;
+  min-width: 320px;
+  position: relative;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/*
+.category::before {
+  background: rgba(0, 0, 0, 0) url(../../assets/images/blueberry-48.png) 0 10px
+    no-repeat;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 260px;
+  height: 60px;
+  top: -20px;
+  left: 50%;
+  z-index: 10;
+}
+*/
+
+.category-logo {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .category-logo {
+    margin: 0 auto;
+    display: block;
+    width: 470px;
+    height: 470px;
+  }
+
+  .category-logo img {
+    animation: rotatelogo 150s infinite linear;
+    user-select: none;
+  }
+}
+
+@keyframes rotatelogo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
