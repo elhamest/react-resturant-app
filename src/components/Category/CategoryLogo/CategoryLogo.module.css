@@ -1,19 +1,6 @@
-
-.category-logo {
-  display: none;
-}
-
 @media (min-width: 500px) {
-  .category-logo {
-    margin: 0 auto;
-    display: block;
-    width: 470px;
-    height: 470px;
-  }
-
-  .category-logo img {
+  .category-logo-img {
     animation: rotatelogo 150s infinite linear;
-    user-select: none;
   }
 }
 

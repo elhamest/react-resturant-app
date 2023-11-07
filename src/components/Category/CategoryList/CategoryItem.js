@@ -2,22 +2,21 @@ import styles from "./CategoryItem.module.css";
 
 const CategoryItem = (props) => {
   return (
-    <div className={`${styles["menu-content-item"]} fade-in-up`}>
+    <div className={`${styles.item} flex flex-row justify-between items-center min-w-[200px] my-2.5 mx-4 text-center rounded-[20px] px-[15px] pt-[15px] pb-0 fade-in-up sm:flex-col sm:flex-1 sm:p-0`}>
       <a
-        className={styles["image-link"]}
+        className="cursor-pointer flex justify-center items-center h-[100px] sm:h-[180px]"
         href="/menu/index.php?id=1"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <img src={props.image} alt={props.alternative} />
+        <img src={props.image} alt={props.alternative} className={`${styles["item-image-link"]} inline-block w-[64px] select-none sm:pt-[30px] sm:px-[15px] pb-0`}/>
       </a>
       <a
-        className={styles["text-link"]}
+        className={`inline-block text-darkPrimaryColor text-base font-bold p-0 cursor-pointer no-underline :visited:no-underline sm:pt-0 sm:px-[15px] sm:pb-5 ${styles["item-text-link"]}`}
         href="/menu/index.php?id=1"
         target="_blank"
         rel="noopener noreferrer"
-      >
-        {props.title}
+      >{props.title}
       </a>
     </div>
   );
