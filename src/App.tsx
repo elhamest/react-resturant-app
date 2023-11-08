@@ -1,3 +1,4 @@
+import Layout from "./components/Layout/Layout"
 import Hero from "./components/Hero/Hero";
 import orderingHourMessage from "./models/orderingHourMessage";
 import Category from "./components/Category/Category";
@@ -52,10 +53,10 @@ function App() {
   };
 
   return (
-    <main>
+    <Layout>
       <Hero orderingHour={getOrderingTimeMessage()} />
       <Category />
-    </main>
+    </Layout>
   );
 }
 

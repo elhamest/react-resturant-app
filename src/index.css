@@ -25,6 +25,11 @@
 body {
   margin: 0;
   min-width: 320px;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2{
+  direction: rtl;
 }
 
 .fade-in-up {
