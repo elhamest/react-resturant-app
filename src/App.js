@@ -3,7 +3,15 @@ import Hero from "./components/Hero/Hero";
 import orderingHourMessage from "./models/orderingHourMessage";
 import Category from "./components/Category/Category";
 
+import Cart from "./components/Cart/Cart";
+import Auth from "./components/Auth/Auth"
+import {useSelector} from "react-redux";
+
 function App() {
+const isLoggedIn = useSelector((state)=>state.isLoggedIn);
+console.log("state is; ", isLoggedIn);
+
+
   const getOrderingTimeMessage = () => {
     const currentDate = new Date();
     const currentHour = currentDate.getHours();
@@ -56,6 +64,8 @@ function App() {
     <Layout>
       <Hero orderingHour={getOrderingTimeMessage()} />
       <Category />
+      {!isLoggedIn && <Auth />}
+      {isLoggedIn && <Cart/>}
     </Layout>
   );
 }
