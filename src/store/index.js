@@ -1,17 +1,21 @@
-//import { createStore } from "redux";
-import { configureStore } from "@reduxjs/toolkit";
+import { createStore } from "redux";
+//import { configureStore } from "@reduxjs/toolkit";
 
-const initialState = { isLoggedIn: false };
+const initialAuthState = { isLoggedIn: false };
 
-function loggingReducer(state = initialState, action) {
+function authReducer(state = initialAuthState, action) {
   if (action.type === "login") {
     return {
       isLoggedIn: true,
     };
   }
-  return state;
+  if(action.type ==="logout")
+return {
+  isLoggedIn: false
+};
+return state;
 }
 
-//const store = createStore(loggingReducer);
-const store = configureStore({reducer: {loggingReducer}});
+const store = createStore(authReducer);
+//const store = configureStore({reducer: {authReducer}});
 export default store;

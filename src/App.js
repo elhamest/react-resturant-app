@@ -5,9 +5,9 @@ import Category from "./components/Category/Category";
 
 import Cart from "./components/Cart/Cart";
 import Auth from "./components/Auth/Auth"
-import {useSelector} from "react-redux";
+import { useSelector } from "react-redux";
 
-function App() {
+function App(props) {
 const isLoggedIn = useSelector((state)=>state.isLoggedIn);
 console.log("state is; ", isLoggedIn);
 
